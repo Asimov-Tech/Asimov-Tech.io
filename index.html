@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I have a bachelors degree in robotics from AAU(Aalborg University),
+             which is ranked as the best engineering University in Europe, and 11 in the world <a href="https://www.aau.dk/om-aau/profil/ranking/placeringer">(source)</a>.
+             <br>
+             Below you can find a selection of some of my projects. <br></p>    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Reinforcement Learning in a robotics application</h3>
+            <p> During my bachelor's degree, I undertook a project focused on applying a reinforcement learning algorithm within a robotics context.
+                My primary responsibility was to develop this algorithm for an articulated robotic arm, aiming to enable it to grasp a 
+                cube as part of a competition hosted by the European Space Agency. The project was a success, and the robot was able to grasp the cube </p>
+                <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/bm1WEpTQGgo">
+                </iframe>
+
+
+            </p>
+        </div>
+          
+        <div class="project">
+            <h3>Generative Art</h3>
+            <p> I have always been fascinated by generative art, and as such I have created several distinguished pieces of art. 
+                Below you can see some of my work, <a id="portfolio-gallery" href="{% url 'test' %}">click here to view my portfolio of art</a>
+                
+            </p>
+                
+
+
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!--
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+-->
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
