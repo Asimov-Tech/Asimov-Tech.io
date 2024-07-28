@@ -177,27 +177,35 @@ description-text{
     display: inline-block;
 }
 
-.desc-preview{
-    font-size: 16px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
 
 .image-preview{
-    width: 1200px;
-    height: auto;
-    display: block;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 25%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.gallery{
-    width: 1200px;
-    
+.desc-preview{
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+
+.desc-preview{
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

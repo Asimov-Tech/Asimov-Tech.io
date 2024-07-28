@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-     <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="test.css">
     <style>
         .desc-preview {
             display: none;
@@ -15,14 +15,13 @@
 </head>
 <body>
 
-<h1 id="firstHeading">Virtual Generative Art Gallery</h1>
+    <h1 id="firstHeading">Virtual Generative Art Gallery</h1>
 
-<a href="index.html">Go to the portfolio page</a>
+    <a id="goBack" href="index.html">Go to the portfolio page</a>
 
-<div class="image-preview">
-    <div class="responsive">
+    <div class="image-preview">
         <div class="gallery">
-            <img src="Images/stripes.png" alt="Description of the image"  width="1200" height="auto">
+            <img src="Images/stripes.png" alt="Description of the image"  width="500px" height="auto">
             <button class="buttonShowText" onclick="showText(this)">Show Description</button>
             <div class="desc-preview" id="desc-image">
                 "Lines of Convergence" is a reflection of the intricacies of human experience and the uncharted pathways we navigate.
@@ -34,85 +33,63 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="image-preview">
-    <div class="responsive">
+    <div class="image-preview">
         <div class="gallery">
-            <img src="Images/Flakes.png" alt="Description of the image"  width="1200" height="auto">
+            <img src="Images/Flakes.png" alt="Description of the image"  width="500px" height="auto">
             <button class="buttonShowText" onclick="showText(this)">Show Description</button>
             <div class="desc-preview" id="desc-image">
                 "Veil of Shadows" is an exploration into the mysterious and ephemeral nature of existence.
-       This piece is composed of intricate, overlapping patterns of translucent, smoky triangles set against a stark black background.
-       Each form emerges from the void, converging and dissipating like fleeting moments and memories.
-       The subtle gradients within the shapes suggest a sense of depth and movement, inviting the viewer to delve into the layered complexity of their own subconscious.
-       The monochromatic palette underscores the enigmatic quality of the artwork, evoking a contemplative mood.
-       Through "Veil of Shadows," I aim to capture the elusive and ever-shifting nature of reality, urging viewers to embrace the unknown and find beauty in the transient.
+                This piece is composed of intricate, overlapping patterns of translucent, smoky triangles set against a stark black background.
+                Each form emerges from the void, converging and dissipating like fleeting moments and memories.
+                The subtle gradients within the shapes suggest a sense of depth and movement, inviting the viewer to delve into the layered complexity of their own subconscious.
+                The monochromatic palette underscores the enigmatic quality of the artwork, evoking a contemplative mood.
+                Through "Veil of Shadows," I aim to capture the elusive and ever-shifting nature of reality, urging viewers to embrace the unknown and find beauty in the transient.
             </div>
         </div>
     </div>
-</div>
 
-
-
-
-<div class="image-preview">
-    <div class="responsive">
+    <div class="image-preview">
         <div class="gallery">
-            <img src="Images/LsVibes.png" alt="Description of the image"  width="1200" height="auto">
+            <img src="Images/LsVibes.png" alt="Description of the image"  width="500px" height="auto">
             <button class="buttonShowText" onclick="showText(this)">Show Description</button>
             <div class="desc-preview" id="desc-image">
-            <div class="desc">"Chromatic Symphony" is an exuberant celebration of color and form, a vivid manifestation of energy and movement.
-                This piece is a riotous blend of vibrant reds, blues, purples, and pinks, all intermingling in a cacophony of abstract shapes against a contrasting black background.
-                 Each blotch and swirl pulses with life, evoking the spontaneity and joy found in unfiltered creative expression. 
-                 The chaotic yet harmonious interplay of hues invites the viewer to lose themselves in the myriad possibilities within the canvas. Through "Chromatic Symphony,"
-                I aim to encapsulate the essence of passion and exuberance, encouraging viewers to embrace the kaleidoscope of emotions and experiences that make up the human spirit.
+                <div class="desc">"Chromatic Symphony" is an exuberant celebration of color and form, a vivid manifestation of energy and movement.
+                    This piece is a riotous blend of vibrant reds, blues, purples, and pinks, all intermingling in a cacophony of abstract shapes against a contrasting black background.
+                    Each blotch and swirl pulses with life, evoking the spontaneity and joy found in unfiltered creative expression.
+                    The chaotic yet harmonious interplay of hues invites the viewer to lose themselves in the myriad possibilities within the canvas. Through "Chromatic Symphony,"
+                    I aim to encapsulate the essence of passion and exuberance, encouraging viewers to embrace the kaleidoscope of emotions and experiences that make up the human spirit.
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
-<div class="image-preview">
-    <div class="responsive">
+    <div class="image-preview">
         <div class="gallery">
-            <img src="Images/v3.png" alt="Description of the image"  width="1200" height="auto">
+            <img src="Images/v3.png" alt="Description of the image"  width="500px" height="auto">
             <button class="buttonShowText" onclick="showText(this)">Show Description</button>
-            <div class="desc-preview" id="desc-image">"Neon Reverie" is a vibrant exploration of luminosity and depth, capturing the ethereal beauty of light in motion.
-                This piece is an amalgamation of blurred, glowing orbs in shades of neon green, electric blue, and vivid purple, set against a velvety black background. 
-                Each glowing spot seems to pulse with an otherworldly energy, evoking a sense of drifting through a dreamscape or peering into a microscopic world teeming with life. 
+            <div class="desc-preview" id="desc-image">
+                "Neon Reverie" is a vibrant exploration of luminosity and depth, capturing the ethereal beauty of light in motion.
+                This piece is an amalgamation of blurred, glowing orbs in shades of neon green, electric blue, and vivid purple, set against a velvety black background.
+                Each glowing spot seems to pulse with an otherworldly energy, evoking a sense of drifting through a dreamscape or peering into a microscopic world teeming with life.
                 The soft focus and overlapping colors create a sense of fluidity and continuous transformation. With "Neon Reverie,"
                 I aim to immerse the viewer in a meditative experience, encouraging them to revel in the abstract beauty of light and color, and to find tranquility within the vibrant chaos.
             </div>
         </div>
     </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    function showText(button) {
-        var desc = button.nextElementSibling;
-        if (desc.style.display === "none" || desc.style.display === "") {
-            desc.style.display = "block";
-            button.textContent = "Hide Description";
-        } else {
-            desc.style.display = "none";
-            button.textContent = "Show Description";
+    <script>
+        function showText(button) {
+            var desc = button.nextElementSibling;
+            if (desc.style.display === "none" || desc.style.display === "") {
+                desc.style.display = "block";
+                button.textContent = "Hide Description";
+            } else {
+                desc.style.display = "none";
+                button.textContent = "Show Description";
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
