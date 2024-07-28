@@ -6,10 +6,56 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="test.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
         .desc-preview {
             display: none;
             margin-top: 10px;
             font-size: 16px;
+        }
+    
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjusted minmax value for larger images */
+            gap: 20px;
+            padding: 20px;
+        }
+    
+        .gallery {
+            background: #f0f0f0;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensure the image does not overflow the container */
+            position: relative;
+        }
+    
+        .gallery img {
+            width: 120%; /* Ensure the image covers the entire gallery item */
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+        }
+    
+        /*.gallery:hover img {
+            transform: scale(1.1);  Scale up the image on hover 
+        }*/
+        .buttonShowText {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .buttonShowText:hover {
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -19,61 +65,91 @@
 
     <a id="goBack" href="index.html">Go to the portfolio page</a>
 
-    <div class="image-preview">
-        <div class="gallery">
-            <img src="Images/stripes.png" alt="Description of the image"  width="500px" height="auto">
-            <button class="buttonShowText" onclick="showText(this)">Show Description</button>
-            <div class="desc-preview" id="desc-image">
-                "Lines of Convergence" is a reflection of the intricacies of human experience and the uncharted pathways we navigate.
-                In this piece, I sought to capture the essence of life's complex yet beautiful intersections through a dynamic array of diagonal,
-                multicolored lines against a profound black canvas. Each line represents a unique journey, a distinct narrative that, when viewed collectively,
-                forms a tapestry of interwoven destinies. The vivid spectrum of hues—from deep purples and greens to delicate blues and reds—symbolizes the diversity
-                and harmony found in our shared existence. My intent was to evoke contemplation on the chaotic yet ordered nature of the universe,
-                inviting viewers to discover the inherent beauty within the abstract intersections of their own lives.
-            </div>
-        </div>
-    </div>
-
-    <div class="image-preview">
-        <div class="gallery">
-            <img src="Images/Flakes.png" alt="Description of the image"  width="500px" height="auto">
-            <button class="buttonShowText" onclick="showText(this)">Show Description</button>
-            <div class="desc-preview" id="desc-image">
-                "Veil of Shadows" is an exploration into the mysterious and ephemeral nature of existence.
-                This piece is composed of intricate, overlapping patterns of translucent, smoky triangles set against a stark black background.
-                Each form emerges from the void, converging and dissipating like fleeting moments and memories.
-                The subtle gradients within the shapes suggest a sense of depth and movement, inviting the viewer to delve into the layered complexity of their own subconscious.
-                The monochromatic palette underscores the enigmatic quality of the artwork, evoking a contemplative mood.
-                Through "Veil of Shadows," I aim to capture the elusive and ever-shifting nature of reality, urging viewers to embrace the unknown and find beauty in the transient.
-            </div>
-        </div>
-    </div>
-
-    <div class="image-preview">
-        <div class="gallery">
-            <img src="Images/LsVibes.png" alt="Description of the image"  width="500px" height="auto">
-            <button class="buttonShowText" onclick="showText(this)">Show Description</button>
-            <div class="desc-preview" id="desc-image">
-                <div class="desc">"Chromatic Symphony" is an exuberant celebration of color and form, a vivid manifestation of energy and movement.
-                    This piece is a riotous blend of vibrant reds, blues, purples, and pinks, all intermingling in a cacophony of abstract shapes against a contrasting black background.
-                    Each blotch and swirl pulses with life, evoking the spontaneity and joy found in unfiltered creative expression.
-                    The chaotic yet harmonious interplay of hues invites the viewer to lose themselves in the myriad possibilities within the canvas. Through "Chromatic Symphony,"
-                    I aim to encapsulate the essence of passion and exuberance, encouraging viewers to embrace the kaleidoscope of emotions and experiences that make up the human spirit.
+    <div class="gallery-container">
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/stripes.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    "Lines of Convergence" is a reflection of the intricacies of human experience and the uncharted pathways we navigate.
+                    In this piece, I sought to capture the essence of life's complex yet beautiful intersections through a dynamic array of diagonal,
+                    multicolored lines against a profound black canvas. Each line represents a unique journey, a distinct narrative that, when viewed collectively,
+                    forms a tapestry of interwoven destinies. The vivid spectrum of hues—from deep purples and greens to delicate blues and reds—symbolizes the diversity
+                    and harmony found in our shared existence. My intent was to evoke contemplation on the chaotic yet ordered nature of the universe,
+                    inviting viewers to discover the inherent beauty within the abstract intersections of their own lives.
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="image-preview">
-        <div class="gallery">
-            <img src="Images/v3.png" alt="Description of the image"  width="500px" height="auto">
-            <button class="buttonShowText" onclick="showText(this)">Show Description</button>
-            <div class="desc-preview" id="desc-image">
-                "Neon Reverie" is a vibrant exploration of luminosity and depth, capturing the ethereal beauty of light in motion.
-                This piece is an amalgamation of blurred, glowing orbs in shades of neon green, electric blue, and vivid purple, set against a velvety black background.
-                Each glowing spot seems to pulse with an otherworldly energy, evoking a sense of drifting through a dreamscape or peering into a microscopic world teeming with life.
-                The soft focus and overlapping colors create a sense of fluidity and continuous transformation. With "Neon Reverie,"
-                I aim to immerse the viewer in a meditative experience, encouraging them to revel in the abstract beauty of light and color, and to find tranquility within the vibrant chaos.
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/Flakes.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    "Veil of Shadows" is an exploration into the mysterious and ephemeral nature of existence.
+                    This piece is composed of intricate, overlapping patterns of translucent, smoky triangles set against a stark black background.
+                    Each form emerges from the void, converging and dissipating like fleeting moments and memories.
+                    The subtle gradients within the shapes suggest a sense of depth and movement, inviting the viewer to delve into the layered complexity of their own subconscious.
+                    The monochromatic palette underscores the enigmatic quality of the artwork, evoking a contemplative mood.
+                    Through "Veil of Shadows," I aim to capture the elusive and ever-shifting nature of reality, urging viewers to embrace the unknown and find beauty in the transient.
+                </div>
+            </div>
+        </div>
+
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/LsVibes.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    <div class="desc">"Chromatic Symphony" is an exuberant celebration of color and form, a vivid manifestation of energy and movement.
+                        This piece is a riotous blend of vibrant reds, blues, purples, and pinks, all intermingling in a cacophony of abstract shapes against a contrasting black background.
+                        Each blotch and swirl pulses with life, evoking the spontaneity and joy found in unfiltered creative expression.
+                        The chaotic yet harmonious interplay of hues invites the viewer to lose themselves in the myriad possibilities within the canvas. Through "Chromatic Symphony,"
+                        I aim to encapsulate the essence of passion and exuberance, encouraging viewers to embrace the kaleidoscope of emotions and experiences that make up the human spirit.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/v3.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    "Neon Reverie" is a vibrant exploration of luminosity and depth, capturing the ethereal beauty of light in motion.
+                    This piece is an amalgamation of blurred, glowing orbs in shades of neon green, electric blue, and vivid purple, set against a velvety black background.
+                    Each glowing spot seems to pulse with an otherworldly energy, evoking a sense of drifting through a dreamscape or peering into a microscopic world teeming with life.
+                    The soft focus and overlapping colors create a sense of fluidity and continuous transformation. With "Neon Reverie,"
+                    I aim to immerse the viewer in a meditative experience, encouraging them to revel in the abstract beauty of light and color, and to find tranquility within the vibrant chaos.
+                </div>
+            </div>
+        </div>
+
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/AdAstra.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    "Pixelated Symphony" is an homage to the digital era, capturing the essence of modernity through a meticulously arranged mosaic of tiny, multicolored squares. 
+                    Each pixel, with its distinct hue, contributes to a larger, cohesive pattern, reflecting the interconnectedness of individual elements in the digital world.
+                    The harmonious blend of pastel shades—ranging from soft blues and greens to gentle pinks and yellows—creates a mesmerizing tapestry that draws the viewer in for closer inspection.
+                    The structured yet seemingly random distribution of colors invites contemplation on the balance between chaos and order.
+                    With "Pixelated Symphony," I aim to celebrate the beauty found in the minutiae of digital art, encouraging viewers to appreciate the complexity and elegance inherent in the simplest of forms.
+                </div>
+            </div>
+        </div>
+
+        <div class="image-preview">
+            <div class="gallery">
+                <img src="Images/Mosaic.png" alt="Description of the image">
+                <button class="buttonShowText" onclick="showText(this)">Show Description</button>
+                <div class="desc-preview" id="desc-image">
+                    "Pixelated Symphony" is an homage to the digital era, capturing the essence of modernity through a meticulously arranged mosaic of tiny, multicolored squares. 
+                    Each pixel, with its distinct hue, contributes to a larger, cohesive pattern, reflecting the interconnectedness of individual elements in the digital world.
+                    The harmonious blend of pastel shades—ranging from soft blues and greens to gentle pinks and yellows—creates a mesmerizing tapestry that draws the viewer in for closer inspection.
+                    The structured yet seemingly random distribution of colors invites contemplation on the balance between chaos and order.
+                    With "Pixelated Symphony," I aim to celebrate the beauty found in the minutiae of digital art, encouraging viewers to appreciate the complexity and elegance inherent in the simplest of forms.
+                </div>
             </div>
         </div>
     </div>
@@ -90,6 +166,5 @@
             }
         }
     </script>
-
 </body>
 </html>
